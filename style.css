@@ -55,6 +55,8 @@ ul#contact li {
     color: white;
     padding: 0.2rem;
     border-radius: 0.2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .page-subtitle {
