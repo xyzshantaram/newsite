@@ -204,10 +204,18 @@ svg {
     #page-wrapper {
         max-width: 85%;
     }
+
+    .project-item {
+        margin-right: auto;
+    }
 }
 
 
 @media only screen and (max-aspect-ratio: 3/4) {
+    .project-item {
+        margin-right: auto;
+    }
+
     #page-wrapper {
         max-width: 95%;
     }
