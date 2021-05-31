@@ -1,0 +1,250 @@
+body {
+    display: flex;
+    padding: 1rem;
+    padding-top: max(4%, calc(20vh - 10%));
+    margin: 0;
+    background-color: #303030;
+    color: #dddddd;
+    font-family: "Crimson Text", serif;
+    font-size: 1.2rem;
+    flex-direction: column;
+    line-height: 1.6;
+    align-items: center;
+}
+
+nav {
+    padding: 0.4rem;
+    display: flex;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* reset */
+a,
+a:visited,
+a:active,
+a:hover,
+a:link {
+    color: inherit;
+    text-decoration: none;
+    padding-bottom: 0.1rem;
+    border-bottom: 2px dashed;
+    transition-duration: 0.2s;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+ul#contact li {
+    font-size: 1.5rem;
+}
+
+
+
+.blog-item {
+    font-size: 1.6rem;
+}
+
+.highlight {
+    background-color: #5e5e5e;
+    color: white;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+}
+
+.page-subtitle {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.nav-item {
+    margin-right: 1rem;
+    transition-duration: 0.4s;
+}
+
+.nav-item:last-of-type {
+    margin-right: auto;
+}
+
+.nav-item.current {
+    color: white;
+    font-weight: bold;
+}
+
+.project-group-heading {
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: "Merriweather", serif;
+}
+
+.project-group {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.project-item {
+    height: 100%;
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: 2px solid #777777;
+    background: #444444;
+    color: #f5f4f0;
+}
+
+.project-item>.wrapper {
+    text-align: center;
+}
+
+.project-image {
+    object-fit: contain;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 1.2em;
+}
+
+.project-description {
+    padding-top: 1.3rem;
+    font-family: "Merriweather", serif;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.project-image img {
+    max-width: 100%;
+    width: auto;
+    border: 2px solid #555555;
+    border-radius: 0.5rem;
+}
+
+#page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 65%;
+}
+
+#page-wrapper p {
+    max-width: 65ch;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-family: "Merriweather";
+}
+
+#project-choices {
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+#project-choices .project-choice {
+    font-size: 2rem;
+    display: inline;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+
+#project-choices .project-choice a {
+    padding: auto;
+}
+
+#project-choices .project-choice a:hover {
+    color: white;
+}
+
+@media not all and (hover: none) {
+
+    a:hover {
+        color: white;
+    }
+
+    .nav-item:not(.current):hover {
+        transform: translate(0, -4px);
+    }
+}
+
+svg {
+    margin-top: 2rem;
+    max-width: 90%;
+    height: auto;
+}
+
+@media only screen and (min-aspect-ratio: 1/1) {
+    .project-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media only screen and (max-aspect-ratio: 4/3) {
+    #page-wrapper {
+        max-width: 75%;
+    }
+}
+
+@media only screen and (max-aspect-ratio: 1/1) {
+    #page-wrapper {
+        max-width: 85%;
+    }
+}
+
+
+@media only screen and (max-aspect-ratio: 3/4) {
+    #page-wrapper {
+        max-width: 95%;
+    }
+
+    nav {
+        font-size: 5vw;
+        padding: 1rem;
+    }
+
+    .nav-item {
+        margin-right: 0.8rem;
+    }
+
+    ul#contact li {
+        font-size: 1.5rem;
+    }
+}
+
+#layer101 {
+    fill: aliceblue;
+}
+
+#layer102 {
+    fill: #303030;
+}
+
+#pasted,
+#pasted * {
+    outline: none;
+    border: none;
+}
+
+#pasted * {
+    stroke: #eeeeee;
+    fill: #303030;
+}
+
+#pasted rect {
+    stroke: #303030;
+}
