@@ -89,9 +89,11 @@ ul#contact li {
     gap: 1.5rem;
     align-items: center;
     margin-bottom: 4rem;
+    justify-content: center;
 }
 
 .project-item {
+    min-width: calc(100% - 2rem - 2px);
     height: 100%;
     padding: 1rem;
     padding-top: 0;
