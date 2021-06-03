@@ -58,6 +58,7 @@ ul#contact li {
     border-radius: 0.2rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 .page-subtitle {
