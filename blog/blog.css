@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 * {
     transition-duration: 0.4s;
     background: var(--bg);
@@ -28,7 +29,7 @@ body {
 }
 
 html {
-    height: calc( 100% - 20px);
+    height: calc(100% - 20px);
     margin: 0;
 }
 
@@ -84,43 +85,47 @@ html {
     #content-wrapper {
         width: 100%;
     }
+
     #text {
         padding: 5px;
         margin-left: 2px;
     }
 }
 
-@supports(--a: 0) {
+body {
+    --bg: #fcf5f0;
+    --primary-border: #999999;
+    --header: #202020;
+    --text: #444444;
+}
+
+.text-content {
+    background: #fffff0;
+}
+
+@media (prefers-color-scheme: light) {
     body {
         --bg: #fcf5f0;
         --primary-border: #999999;
         --header: #202020;
         --text: #444444;
     }
-    .text-content {
+
+    .project-item {
         background: #fffff0;
     }
-    @media (prefers-color-scheme: light) {
-        body {
-            --bg: #fcf5f0;
-            --primary-border: #999999;
-            --header: #202020;
-            --text: #444444;
-        }
-        .project-item {
-            background: #fffff0;
-        }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg: #303030;
+        --primary-border: #999999;
+        --text: #fffae7;
+        --header: #fcf5f0;
     }
-    @media (prefers-color-scheme: dark) {
-        body {
-            --bg: #303030;
-            --primary-border: #999999;
-            --text: #fffae7;
-            --header: #fcf5f0;
-        }
-        .project-item {
-            background: #202020;
-        }
+
+    .project-item {
+        background: #202020;
     }
 }
 
@@ -146,6 +151,7 @@ a[id^=n] {
     display: inline-block;
     border: none;
 }
+
 a[id^=fn] {
     border: none;
 }
