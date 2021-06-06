@@ -12,7 +12,7 @@
 body {
     display: flex;
     padding: 1rem;
-    padding-top: max(4%, calc(20vh - 10%));
+    padding-top: max(2%, calc(20vh - 10%));
     margin: 0;
     background-color: var(--bg);
     color: var(--text);
