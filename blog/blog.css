@@ -9,7 +9,6 @@
 * a {
     text-decoration: none;
     color: var(--text);
-    border-radius: 6px;
     padding-bottom: 3px;
     border-bottom: 2px dashed var(--primary-border);
 }
@@ -57,10 +56,6 @@ html {
 #content-wrapper {
     margin: 5px;
     padding: 5px;
-    border-radius: 10px;
-    border-left: 1px solid var(--primary-border);
-    border-right: 1px solid var(--primary-border);
-    border-bottom: 1px dashed var(--primary-border);
     padding-bottom: 10px;
     max-width: 80ch;
 }
@@ -93,10 +88,10 @@ html {
 }
 
 body {
-    --bg: #fcf5f0;
+    --bg: #202020;
     --primary-border: #999999;
     --header: #202020;
-    --text: #444444;
+    --text: #eeeeee;
 }
 
 .text-content {
@@ -118,9 +113,9 @@ body {
 
 @media (prefers-color-scheme: dark) {
     body {
-        --bg: #303030;
+        --bg: #202020;
         --primary-border: #999999;
-        --text: #fffae7;
+        --text: #eeeeee;
         --header: #fcf5f0;
     }
 
