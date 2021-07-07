@@ -39,7 +39,6 @@ function init() {
     document.body.appendChild(canvas);
     const ctx = canvas.getContext("2d");
     window.bubbles = new Bubbles(canvas, ctx);
-    touchInit();
 
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
