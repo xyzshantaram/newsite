@@ -48,10 +48,9 @@ function init() {
 
     window.requestAnimationFrame(draw);
 
-    window.onresize = function() {
+    window.addEventListener('resize', function() {
         window.bubbles = new Bubbles(canvas, ctx, window.bubbles.entities);
-
-    }
+    })
 }
 
 const getCSSCustomProp = (propKey, element = document.documentElement, castAs = 'string') => {
@@ -113,11 +112,11 @@ class Bubble {
         }
 
         if (this.isColliding({
-                pos: this.parent.mouse.pos,
+                pos: window.bubblesMouse.pos,
                 radius: MOUSE_RADIUS
             })) {
-            let dx = this.pos.x - this.parent.mouse.pos.x;
-            let dy = this.pos.y - this.parent.mouse.pos.y;
+            let dx = this.pos.x - window.bubblesMouse.pos.x;
+            let dy = this.pos.y - window.bubblesMouse.pos.y;
 
             let dist = Math.sqrt(dx * dx + dy * dy) || 1;
 
@@ -127,8 +126,8 @@ class Bubble {
 
             let cr = this.radius + MOUSE_RADIUS;
 
-            this.pos.x = this.parent.mouse.pos.x + cr * ux;
-            this.pos.y = this.parent.mouse.pos.y + cr * uy;
+            this.pos.x = window.bubblesMouse.pos.x + cr * ux;
+            this.pos.y = window.bubblesMouse.pos.y + cr * uy;
 
             this.vel.x *= -1;
             this.vel.y *= -1;
@@ -188,23 +187,23 @@ class Bubbles {
         }
         this.entityPairs = pairs(this.entities);
 
-        this.mouse = {
+        window.bubblesMouse = window.bubblesMouse || {
             pos: {
                 x: 0,
                 y: 0
             },
             right: false,
             left: false
-        }
+        };
 
-        window.onmousemove = (e) => {
+        window.addEventListener('mousemove', (e) => {
             let rect = this.canvas.getBoundingClientRect();
-            this.mouse.pos.x = Math.round(e.clientX - rect.left);
-            this.mouse.pos.y = Math.round(e.clientY - rect.top);
-        }
+            window.bubblesMouse.pos.x = Math.round(e.clientX - rect.left);
+            window.bubblesMouse.pos.y = Math.round(e.clientY - rect.top);
+        });
     }
 
-    draw() {
+    update() {
         const resolved = []
         const collidingPairs = this.entityPairs.filter(pair => pair[0].isColliding(pair[1]));
 
@@ -232,9 +231,21 @@ class Bubbles {
                 pair[1].vel.y *= -1;
             }
         }
+    }
 
+    draw() {
+        this.update();
         for (let bubble of this.entities) {
             bubble.draw(this.ctx);
         }
+    }
+
+    drawMouse() {
+        this.ctx.beginPath();
+        this.ctx.arc(window.bubblesMouse.pos.x, window.bubblesMouse.pos.y, MOUSE_RADIUS, 0, 2 * Math.PI, false);
+        this.ctx.globalAlpha = 1;
+        this.ctx.closePath();
+        this.ctx.fillStyle = 'red';
+        this.ctx.fill();
     }
 }
