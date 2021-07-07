@@ -320,6 +320,8 @@ svg {
     --particle-color: rebeccapurple;
 }
 
+
+
 @media screen and (max-aspect-ratio: 1/1) {
     :root {
         --particle-count: 150;
@@ -336,4 +338,57 @@ svg {
     }
 }
 
-@media screen and (prefers-color-scheme: light) {}
+@media screen and (prefers-color-scheme: light) {
+    * {
+        --bg: #fcfcfc;
+        --text: #303030;
+        --text-em-1: #202020;
+        --text-em-2: black;
+        --highlight-bg: #eeeeee;
+        --card-bg: #ffffff;
+    }
+
+
+    @supports not(--a: 0) {
+        body {
+            background-color: #fcfcfc;
+            color: #303030;
+        }
+
+        .highlight {
+            background-color: #eeeeee;
+        }
+
+        .project-item {
+            border-color: #777777;
+            background: #ffffff;
+            color: #303030;
+        }
+
+        .project-image img {
+            border-color: #666666;
+        }
+
+        .highlight,
+        .page-subtitle,
+        .nav-item.current,
+        .project-group-heading {
+            color: black;
+        }
+
+        @media not all and (hover: none) {
+
+            a:hover,
+            #project-choices .project-choice a:hover {
+                color: black;
+            }
+        }
+
+    }
+}
+
+@media (prefers-reduced-motion) {
+    :root {
+        --particles-off: 1;
+    }
+}

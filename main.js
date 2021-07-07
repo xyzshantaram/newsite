@@ -31,6 +31,9 @@ function clamp(min, num, max) {
 const pairs = (arr) => arr.map((v, i) => arr.slice(i + 1).map(w => [v, w])).flat();
 
 function init() {
+    if (getCSSCustomProp('--particles-off')) {
+        return;
+    }
     document.body.style.background = 'transparent';
     const canvas = document.createElement('canvas');
     document.body.appendChild(canvas);
