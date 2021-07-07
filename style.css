@@ -317,9 +317,8 @@ svg {
     --particle-radius-min: 5;
     --particle-radius-max: 10;
     --particle-color: rebeccapurple;
+    --bubbles-bg: var(--bg);
 }
-
-
 
 @media screen and (max-aspect-ratio: 1/1) {
     :root {
