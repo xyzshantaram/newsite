@@ -14,8 +14,19 @@ sources=(
     "portfolio/index.html"
     "projects/index.html"
     "blog/blog.css"
-    "main.js"
+    "bubbles.js"
 )
+
+echo "Checking sources..."
+
+for src in "${sources[@]}"; do
+    if [[ -f "$src" ]]; then
+        echo "Found $src..."
+    else
+        echo "ERROR: file not found: $src"
+        exit 1
+    fi
+done
 
 if [[ -z "$1" ]]; then
     echo "$name: No destination provided."
@@ -36,6 +47,9 @@ fi
 
 for src in "${sources[@]}"; do
     if ! cmp -s "$srcdir/$src" "$1/$src"; then
+        echo "Updating $src..."
         $cmd "$srcdir/$src" "$1/$src"
+    else
+        echo "$src not modified, skipping..."
     fi
 done
