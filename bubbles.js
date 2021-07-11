@@ -34,7 +34,7 @@ function init() {
     if (getCSSCustomProp('--particles-off')) {
         return;
     }
-    document.body.style.background = 'transparent';
+
     const canvas = document.createElement('canvas');
     document.body.appendChild(canvas);
     const ctx = canvas.getContext("2d");
@@ -161,7 +161,7 @@ class Bubbles {
             margin: "0",
             width: "100vw",
             height: "100vh",
-            'background-color': getCSSCustomProp('--bubbles-bg') || '#303030',
+            'background-color': 'transparent',
             overflow: 'hidden',
             zIndex: '-1'
         });
