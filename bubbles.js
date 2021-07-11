@@ -161,7 +161,7 @@ class Bubbles {
             margin: "0",
             width: "100vw",
             height: "100vh",
-            'background-color': 'transparent',
+            'background-color': getCSSCustomProp('--bubbles-bg') || 'transparent',
             overflow: 'hidden',
             zIndex: '-1'
         });
