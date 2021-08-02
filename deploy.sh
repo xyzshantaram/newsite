@@ -2,7 +2,7 @@
 
 srcdir="$PWD"
 name="deploy"
-cmd="cp -v"
+cmd="cp -rv"
 
 # relative paths wheee
 sources=( 
@@ -15,12 +15,15 @@ sources=(
     "projects/index.html"
     "blog/blog.css"
     "bubbles.js"
+    "portfolio/res"
+    "portfolio/sites"
+    "projects/res"
 )
 
 echo "Checking sources..."
 
 for src in "${sources[@]}"; do
-    if [[ -f "$src" ]]; then
+    if [[ -f "$src" ]] || [[ -d "$src" ]]; then
         echo "Found $src..."
     else
         echo "ERROR: file not found: $src"
@@ -46,7 +49,7 @@ if [[ $2 == "--dry-run" ]]; then
 fi
 
 for src in "${sources[@]}"; do
-    if ! cmp -s "$srcdir/$src" "$1/$src"; then
+    if ! diff -s "$srcdir/$src" "$1/$src" > /dev/null; then
         echo "Updating $src..."
         $cmd "$srcdir/$src" "$1/$src"
     else

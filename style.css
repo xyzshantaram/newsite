@@ -153,6 +153,10 @@ ul#contact li {
     border-radius: 0.5rem;
 }
 
+.project-item-list {
+    text-align: left;
+}
+
 #page-wrapper {
     display: flex;
     flex-direction: column;
@@ -181,10 +185,13 @@ ul#contact li {
 
 #project-choices {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-family: "Merriweather", serif;
-    margin-bottom: 2rem;
     padding: 1em;
+}
+
+#resume-link {
+    font-size: 1.6rem;
 }
 
 #project-choices .project-choice {
