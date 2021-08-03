@@ -94,6 +94,10 @@ ul#contact li {
     font-weight: bold;
 }
 
+.nav-item.current a {
+    border-bottom-style: solid;
+}
+
 .project-group-heading {
     color: var(--text-em-2);
     font-size: 1.5rem;
@@ -205,6 +209,7 @@ ul#contact li {
 
     a:hover {
         color: var(--text-em-2);
+        border-bottom-style: solid;
     }
 
     .nav-item:not(.current):hover {
