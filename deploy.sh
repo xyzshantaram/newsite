@@ -2,7 +2,7 @@
 
 srcdir="$PWD"
 name="deploy"
-cmd="cp -rv"
+cmd="rsync -rv"
 
 # relative paths wheee
 sources=( 
