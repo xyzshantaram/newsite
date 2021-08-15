@@ -15,9 +15,9 @@ sources=(
     "projects/index.html"
     "blog/blog.css"
     "bubbles.js"
-    "portfolio/res"
-    "portfolio/sites"
-    "projects/res"
+    "portfolio/res/"
+    "portfolio/sites/"
+    "projects/res/"
 )
 
 echo "Checking sources..."
