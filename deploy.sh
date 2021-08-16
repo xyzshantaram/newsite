@@ -11,6 +11,7 @@ sources=(
     "services/index.html"
     "blog/index.html"
     "contact/index.html"
+    "contact/donate.html"
     "portfolio/index.html"
     "projects/index.html"
     "blog/blog.css"
