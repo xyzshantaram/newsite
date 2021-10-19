@@ -53,7 +53,7 @@ function init() {
     })
 }
 
-const getCSSCustomProp = (propKey, element = document.documentElement, castAs = 'string') => {
+const getCSSCustomProp = (propKey, castAs = 'string', element = document.documentElement) => {
     let response = getComputedStyle(element).getPropertyValue(propKey);
     // Tidy up the string if there's something to work with
     if (response.length) {
@@ -79,8 +79,8 @@ const getCSSCustomProp = (propKey, element = document.documentElement, castAs = 
 class Bubble {
     constructor(parent, color, alpha) {
         this.parent = parent;
-        const radiusUpperBound = getCSSCustomProp('--particle-radius-max', document.documentElement, 'int');
-        const radiusLowerBound = getCSSCustomProp('--particle-radius-min', document.documentElement, 'int');
+        const radiusUpperBound = getCSSCustomProp('--particle-radius-max', 'int');
+        const radiusLowerBound = getCSSCustomProp('--particle-radius-min', 'int');
         this.radius = randInt(radiusLowerBound, radiusUpperBound);
 
         this.pos = {
@@ -89,10 +89,11 @@ class Bubble {
         }
 
         const randSign = () => Math.random() >= 50 ? 1 : -1;
+        const velocityConstant = getCSSCustomProp('--velocity-constant', 'float') || 0.5;
 
         this.vel = {
-            x: randSign() * Math.random() * 0.5,
-            y: randSign() * Math.random() * 0.5,
+            x: randSign() * Math.random() * velocityConstant,
+            y: randSign() * Math.random() * velocityConstant,
         }
 
         this.color = color;
@@ -175,13 +176,14 @@ class Bubbles {
         this.canvas.height = this.height;
 
         this.color = getCSSCustomProp('--particle-color') || 'orangered';
+        let maxAlpha = getCSSCustomProp('--max-alpha', 'int') || 100;
 
         this.entities = entities;
         if (entities.length === 0) {
-            let particleCount = getCSSCustomProp('--particle-count', document.documentElement, 'int');
+            let particleCount = getCSSCustomProp('--particle-count', 'int');
             for (let x = 0; x < particleCount; x++) {
                 this.entities.push(
-                    new Bubble(this, this.color, 0.1 + (randInt(0, 100) * 0.01))
+                    new Bubble(this, this.color, 0.1 + (randInt(0, maxAlpha) * 0.01))
                 );
             }
         }

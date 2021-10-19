@@ -7,6 +7,12 @@
     --card-bg: #404040;
     --card-border: #777777;
     --image-border: #666666;
+    --velocity-constant: 0.3;
+    --max-alpha: 50;
+    --particle-count: 200;
+    --particle-radius-min: 5;
+    --particle-radius-max: 10;
+    --particle-color: rebeccapurple;
 }
 
 body {
@@ -292,7 +298,6 @@ svg {
     }
 
     @media not all and (hover: none) {
-
         a:hover,
         #project-choices .project-choice a:hover {
             color: white;
@@ -325,10 +330,6 @@ svg {
 }
 
 :root {
-    --particle-count: 200;
-    --particle-radius-min: 5;
-    --particle-radius-max: 10;
-    --particle-color: rebeccapurple;
 }
 
 @media screen and (max-aspect-ratio: 1/1) {
