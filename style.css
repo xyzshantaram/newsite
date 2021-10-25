@@ -329,9 +329,6 @@ svg {
     }
 }
 
-:root {
-}
-
 @media screen and (max-aspect-ratio: 1/1) {
     :root {
         --particle-count: 150;
