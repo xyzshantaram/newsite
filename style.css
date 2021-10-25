@@ -356,6 +356,8 @@ svg {
         --text-em-2: black;
         --highlight-bg: #eeeeee;
         --card-bg: #ffffff;
+        --particle-color: #fae7ec;
+        --max-alpha: 80;
     }
 
 
