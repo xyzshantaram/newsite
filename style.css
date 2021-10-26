@@ -401,3 +401,7 @@ svg {
         --particles-off: 1;
     }
 }
+
+img.gc-analytics-img {
+    display: none;
+}
