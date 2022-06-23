@@ -15,6 +15,8 @@ sources=(
     "portfolio/index.html"
     "projects/index.html"
     "blog/blog.css"
+    "blog/imperfect.html"
+    "blog/better.html"
     "bubbles.js"
     "portfolio/res/"
     "portfolio/sites/"
