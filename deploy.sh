@@ -52,7 +52,7 @@ if [[ $2 == "--dry-run" ]]; then
 fi
 
 for src in "${sources[@]}"; do
-    if ! diff -s "$srcdir/$src" "$1/$src" > /dev/null; then
+    if ! diff -s "$srcdir/$src" "$1/$src" > /dev/null 2>&1; then
         echo "Updating $src..."
         $cmd "$srcdir/$src" "$1/$src"
     else
