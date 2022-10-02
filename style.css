@@ -158,7 +158,6 @@ ul#contact li {
 .project-image img {
     max-width: 100%;
     width: auto;
-    border: 2px solid var(--image-border);
     border-radius: 0.5rem;
 }
 
