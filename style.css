@@ -110,6 +110,7 @@ ul#contact li {
     align-items: center;
     margin-bottom: 4rem;
     justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .project-item {
@@ -170,7 +171,6 @@ ul#contact li {
 
 #page-wrapper p {
     max-width: 65ch;
-    font-size: 1rem;
     line-height: 1.8;
 }
 
@@ -211,6 +211,42 @@ ul#contact li {
     padding-right: 0.4rem;
 }
 
+input[id$=work-tab] {
+    display: none;
+}
+
+/* hide radio buttons */
+input[id$=work-tab]+label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* show labels in line */
+input[id$=work-tab]~.tab {
+    display: none
+}
+
+#creative-work-tab:checked~.tab.creative-work,
+#technical-work-tab:checked~.tab.technical-work {
+    display: block;
+}
+
+input[id$=work-tab]+label {
+    border: 1px solid var(--text);
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+input[id$=work-tab]:checked+label {
+    /* white background for selected tab */
+    border-width: 2px;
+    font-weight: bold;
+}
+
+.project-tabs {
+    margin-top: 4rem;
+}
+
 @media not all and (hover: none) {
     a:hover {
         color: var(--text-em-2);
@@ -236,15 +272,19 @@ svg {
     height: auto;
 }
 
-@media only screen and (min-aspect-ratio: 1/1) {
-    .project-group {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 @media only screen and (max-aspect-ratio: 4/3) {
     #page-wrapper {
         max-width: 75%;
+    }
+
+    .project-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-aspect-ratio: 1/1) {
+    .project-group {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -317,7 +357,7 @@ svg {
     }
 
     nav {
-        font-size: 4.4vw;
+        font-size: 3.5vw;
         padding: 1rem;
     }
 
