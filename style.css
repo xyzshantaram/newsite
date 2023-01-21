@@ -4,7 +4,7 @@
     --text-em-1: #f5f4f0;
     --text-em-2: white;
     --highlight-bg: #5e5e5e;
-    --card-bg: #404040;
+    --card-bg: #202020;
     --card-border: #777777;
     --image-border: #666666;
     --velocity-constant: 0.3;
@@ -129,7 +129,6 @@ ul#contact li {
     border: 2px solid var(--card-border);
     background: var(--card-bg);
     color: var(--text-em-1);
-    box-shadow: 0.125rem 0.125rem var(--card-border);
     transition-duration: 0.1s;
 }
 
@@ -238,8 +237,11 @@ input[id$=work-tab]+label {
 }
 
 input[id$=work-tab]:checked+label {
-    /* white background for selected tab */
     border-width: 2px;
+    font-weight: bold;
+}
+
+input[id$=work-tab]:not(:checked)+label:hover {
     font-weight: bold;
 }
 
@@ -262,7 +264,7 @@ input[id$=work-tab]:checked+label {
     }
 
     .project-item:hover {
-        box-shadow: 0.25rem 0.25rem var(--card-border);
+        transform: scale(1.4);
     }
 }
 
