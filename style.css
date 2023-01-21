@@ -7,12 +7,6 @@
     --card-bg: #202020;
     --card-border: #777777;
     --image-border: #666666;
-    --velocity-constant: 0.3;
-    --max-alpha: 50;
-    --particle-count: 200;
-    --particle-radius-min: 5;
-    --particle-radius-max: 10;
-    --particle-color: rebeccapurple;
 }
 
 body {
