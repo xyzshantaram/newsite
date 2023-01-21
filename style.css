@@ -22,7 +22,7 @@ body {
     margin: 0;
     background-color: var(--bg);
     color: var(--text);
-    font-family: "Crimson Text", serif;
+    font-family: "CMUTypewriterTextRegular", serif;
     font-size: 1.2rem;
     flex-direction: column;
     line-height: 1.6;
@@ -48,9 +48,13 @@ a:hover,
 a:link {
     color: inherit;
     text-decoration: none;
-    padding-bottom: 0.1rem;
     border-bottom: 2px dashed;
     transition-duration: 0.2s;
+}
+
+.nav-main a,
+.nav-main a:visited {
+    border-bottom: none;
 }
 
 ul {
@@ -65,7 +69,6 @@ ul#contact li {
 .blog-item {
     padding: 0.25em;
     font-size: 1.3rem;
-    font-family: "Merriweather", serif;
 }
 
 .highlight {
@@ -99,16 +102,6 @@ ul#contact li {
 .nav-item.current {
     color: var(--text-em-2);
     font-weight: bold;
-}
-
-.nav-item.current a {
-    border-bottom-style: solid;
-}
-
-.project-group-heading {
-    color: var(--text-em-2);
-    font-size: 1.5rem;
-    font-family: "Merriweather", serif;
 }
 
 .project-group {
@@ -154,7 +147,6 @@ ul#contact li {
 
 .project-description {
     padding-top: 1.3rem;
-    font-family: "Merriweather", serif;
     font-size: 1rem;
     line-height: 1.8;
 }
@@ -180,7 +172,6 @@ ul#contact li {
     max-width: 65ch;
     font-size: 1rem;
     line-height: 1.8;
-    font-family: "Merriweather";
 }
 
 #page-wrapper.services .wrapper {
@@ -196,14 +187,21 @@ ul#contact li {
 }
 
 #project-choices {
-    text-align: center;
     font-size: 1.3rem;
-    font-family: "Merriweather", serif;
     padding: 1em;
+    width: 100%;
 }
 
-#resume-link {
+.pf-outbound-link {
     font-size: 1.6rem;
+    margin: 0.4rem;
+}
+
+.pf-outbound-links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding-inline-start: 0;
 }
 
 #project-choices .project-choice {
@@ -240,7 +238,7 @@ svg {
 
 @media only screen and (min-aspect-ratio: 1/1) {
     .project-group {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
