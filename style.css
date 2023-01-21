@@ -129,6 +129,7 @@ ul#contact li {
     border: 2px solid var(--card-border);
     background: var(--card-bg);
     color: var(--text-em-1);
+    transition-duration: 0.3s;
 }
 
 .project-item>.wrapper {
@@ -263,7 +264,8 @@ input[id$=work-tab]:not(:checked)+label:hover {
     }
 
     .project-item:hover {
-        transform: scale(1.4);
+        z-index: 2;
+        transform: scale(1.25);
     }
 }
 
