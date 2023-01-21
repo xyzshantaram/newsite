@@ -185,12 +185,6 @@ ul#contact li {
     text-align: center;
 }
 
-#project-choices {
-    font-size: 1.3rem;
-    padding: 1em;
-    width: 100%;
-}
-
 .pf-outbound-link {
     font-size: 1.6rem;
     margin: 0.4rem;
@@ -201,13 +195,6 @@ ul#contact li {
     display: flex;
     flex-direction: row;
     padding-inline-start: 0;
-}
-
-#project-choices .project-choice {
-    font-size: 1.6rem;
-    display: inline;
-    padding-left: 0.4rem;
-    padding-right: 0.4rem;
 }
 
 input[id$=work-tab] {
@@ -257,10 +244,6 @@ input[id$=work-tab]:not(:checked)+label:hover {
 
     .nav-item:not(.current):hover {
         transform: translate(0, -4px);
-    }
-
-    #project-choices .project-choice a:hover {
-        color: var(--text-em-2);
     }
 
     .project-item:hover {
@@ -336,15 +319,13 @@ svg {
 
     .highlight,
     .page-subtitle,
-    .nav-item.current,
-    .project-group-heading {
+    .nav-item.current {
         color: white;
     }
 
     @media not all and (hover: none) {
 
-        a:hover,
-        #project-choices .project-choice a:hover {
+        a:hover {
             color: white;
         }
     }
@@ -407,24 +388,15 @@ svg {
 
         .highlight,
         .page-subtitle,
-        .nav-item.current,
-        .project-group-heading {
+        .nav-item.current {
             color: black;
         }
 
         @media not all and (hover: none) {
-
-            a:hover,
-            #project-choices .project-choice a:hover {
+            a:hover {
                 color: black;
             }
         }
-    }
-}
-
-@media (prefers-reduced-motion) {
-    :root {
-        --particles-off: 1;
     }
 }
 
