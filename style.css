@@ -295,8 +295,8 @@ svg {
     }
 
     .nav-main ul {
-        flex-direction: column;
-        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     .nav-item.current {
