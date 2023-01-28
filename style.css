@@ -11,8 +11,7 @@
 
 body {
     display: flex;
-    padding: 1rem;
-    padding-top: max(2%, calc(20vh - 10%));
+    padding: 0.6rem;
     margin: 0;
     background-color: var(--bg);
     color: var(--text);
@@ -25,8 +24,8 @@ body {
 
 nav {
     padding: 0.4rem;
+    margin-top: 1rem;
     display: flex;
-    margin-bottom: 1rem;
     font-size: 1.5rem;
     justify-content: center;
     user-select: none;
@@ -225,6 +224,16 @@ label[for=hamburger] {
     display: none;
 }
 
+footer {
+    width: 100%;
+}
+
+footer>nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
 @media not all and (hover: none) {
     a:hover {
         color: var(--text-em-2);
@@ -263,19 +272,31 @@ svg {
     }
 
     label[for=hamburger] {
-        display: block;
+        display: flex;
         font-size: 2rem;
         cursor: pointer;
         font-weight: bold;
         user-select: none;
+        margin-top: 2rem;
+        line-height: 1;
+    }
+
+    label[for="hamburger"]>* {
+        margin: 1rem;
+    }
+
+    label[for=hamburger]>span.hamburger-icon {
+        margin-left: auto;
     }
 
     .nav-main {
         display: none;
+        margin-top: 0;
     }
 
     .nav-main ul {
         flex-direction: column;
+        margin: 0;
     }
 
     .nav-item.current {
@@ -356,10 +377,6 @@ svg {
 
     #page-wrapper {
         max-width: 95%;
-    }
-
-    nav {
-        padding: 1rem;
     }
 
     .nav-item {
