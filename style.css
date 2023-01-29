@@ -286,6 +286,9 @@ object {
     .project-group {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+@media only screen and (max-aspect-ratio: 1/1) {
 
     .column {
         flex-direction: column;
@@ -305,9 +308,7 @@ object {
         max-width: 100%;
         width: 100%;
     }
-}
 
-@media only screen and (max-aspect-ratio: 1/1) {
     .project-group {
         grid-template-columns: repeat(1, 1fr);
     }
