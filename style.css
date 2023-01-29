@@ -234,6 +234,34 @@ footer>nav {
     font-size: 1rem;
 }
 
+.column {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+object {
+    height: 100%;
+}
+
+.bio {
+    max-height: 40ch;
+    margin: 2rem;
+}
+
+.bio>p {
+    margin-left: 3rem;
+}
+
+.column>.is-one-third {
+    width: 33.34%;
+}
+
+.column>.is-two-thirds {
+    width: 66.66%;
+}
+
 @media not all and (hover: none) {
     a:hover {
         color: var(--text-em-2);
@@ -250,12 +278,6 @@ footer>nav {
     }
 }
 
-svg {
-    margin-top: 2rem;
-    max-width: 90%;
-    height: auto;
-}
-
 @media only screen and (max-aspect-ratio: 4/3) {
     #page-wrapper {
         max-width: 75%;
@@ -263,6 +285,25 @@ svg {
 
     .project-group {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .column {
+        flex-direction: column;
+    }
+
+    .bio {
+        height: 100vh;
+        max-height: unset;
+    }
+
+    .bio>p {
+        margin-left: auto;
+    }
+
+    .column>.is-one-third,
+    .column>.is-two-thirds {
+        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -311,19 +352,6 @@ svg {
         width: 100%;
         text-align: center;
     }
-}
-
-#svg-foreground {
-    fill: #101010;
-}
-
-#svg-background {
-    fill: #f5f4f0;
-}
-
-svg {
-    max-height: 45vh;
-    max-width: 100vw;
 }
 
 @media only screen and (max-aspect-ratio: 1/1) {
