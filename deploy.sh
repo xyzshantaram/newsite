@@ -20,6 +20,8 @@ sources=(
     "portfolio/res/"
     "portfolio/sites/"
     "projects/res/"
+    "icon.css"
+    "img.svg"
 )
 
 echo "Checking sources..."
