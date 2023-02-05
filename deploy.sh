@@ -24,6 +24,7 @@ sources=(
     "projects/res/"
     "icon.css"
     "img.svg"
+    "assets/fonts"
 )
 
 echo "Checking sources..."
