@@ -17,6 +17,8 @@ sources=(
     "blog/blog.css"
     "blog/imperfect.html"
     "blog/better.html"
+    "blog/template.html"
+    "blog/bullet.html"
     "portfolio/res/"
     "portfolio/sites/"
     "projects/res/"
