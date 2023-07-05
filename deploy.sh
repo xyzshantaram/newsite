@@ -14,6 +14,7 @@ sources=(
     "contact/donate.html"
     "portfolio/index.html"
     "blog/blog.css"
+    "blog/feed.rss"
     "blog/imperfect.html"
     "blog/better.html"
     "blog/template.html"

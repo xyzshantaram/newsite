@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rss version="2.0">
+    <channel>
+        <title>shantaram.xyz</title>
+        <link>https://www.shantaram.xyz/</link>
+        <description>shan's corner of the internet</description>
+        <lastBuildDate>2023-07-06</lastBuildDate>
+
+        <item>
+            <title>Dead Mail</title>
+            <link>https://shantaram.itch.io/dead-mail</link>
+            <description>Dead Mail is a visual novel I wrote for a game jam.</description>
+            <pubdate>2019-09-15</pubdate>
+        </item>
+        <item>
+            <title>A Better Place</title>
+            <link>https://shantaram.xyz/blog/better.html</link>
+            <description>A Better Place, a short story about a cab ride.</description>
+            <pubdate>2020-12-14</pubdate>
+        </item>
+        <item>
+            <title>imperfect dream</title>
+            <link>https://shantaram.xyz/blog/imperfect.html</link>
+            <description>a short story about a drive to the airport.</description>
+            <pubdate>2022-06-23</pubdate>
+        </item>
+        <item>
+            <title>Five months and five thousand kilometers with the Royal Enfield Bullet (2022)</title>
+            <link>https://shantaram.xyz/blog/bullet.html</link>
+            <description>A review of my motorcycle.</description>
+            <pubdate>2023-02-05</pubdate>
+        </item>
+        <item>
+            <title>Two Slow Dancers</title>
+            <link>https://shantaram.xyz/blog/twoslowdancers.html</link>
+            <description>An experiment at writing in a dreamy, reflective style.</description>
+            <pubdate>2023-03-03</pubdate>
+        </item>
+    </channel>
+</rss>
