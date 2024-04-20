@@ -9,6 +9,10 @@
     --image-border: #666666;
 }
 
+.smaller {
+    font-size: 1.2rem;
+}
+
 body {
     display: flex;
     padding: 0.6rem;
