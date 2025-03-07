@@ -1,0 +1,51 @@
+input[type="radio"]:checked+label {
+    font-weight: bold;
+    color: #202020;
+    background-color: #f5f4f0;
+}
+
+.choices-group input {
+    display: none;
+}
+
+.choices-group {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    .choices-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+.choices-group label {
+    border: 2px solid #f5f4f0;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.scope-of-work label>strong {
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.construction-banner {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#page-wrapper>p {
+    max-width: unset;
+}
+
+#results-container {
+    max-width: 70ch;
+}
+
+.top-link {
+    margin: 1rem;
+}
