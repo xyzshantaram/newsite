@@ -153,9 +153,8 @@
         const REQUIRED = ['location', 'service', 'scope'];
 
         const resultTemplate = (minPrice, maxPrice, currency, maintenanceCost, maintenanceInfo) => html`
-            <div>Your final estimate:</div>
             <div class=estimate-container>
-            <strong>${minPrice}</strong> - <strong>${maxPrice}</strong> (varies based on project details) ${maintenanceCost > 0 ? `+ ${currency}${maintenanceCost}/mo for maintenance contract` : ''}
+                <strong>${minPrice}</strong> - <strong>${maxPrice}</strong> (varies based on project details) ${maintenanceCost > 0 ? `+ ${currency}${maintenanceCost}/mo for maintenance contract` : ''}
             </div>
             <strong>Included:</strong>
             <ul>
