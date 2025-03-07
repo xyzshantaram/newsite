@@ -106,16 +106,23 @@
             </div>
         </form>
 
+        <h2 id="estimate-heading">Your Estimate</h2>
+
         <div id="results-container"></div>
 
-        <p><strong>Prices are subject to change - <a href='/contact'>enquire now</a> to lock them!</strong> While my
-            standard
-            pricing for international clients is $25/hour, if you're working toward a good cause or a non-commercial
-            project, feel free to reach out, and we can find a rate that works for both of us.</p>
+        <h3>Notes</h3>
 
-        <p>I accept payments via <strong>PayPal</strong> as well as <strong>ETH/BTC/XMR</strong>, and
-            <strong>UPI</strong> for Indian customers.
-        </p>
+        <ul>
+            <li>Prices are subject to change. <strong><a href='/contact'>Enquire now</a></strong> to confirm.</li>
+            <li>
+                While my standard pricing for international clients is $25/hour, if you're working toward a good cause
+                or a non-commercial project, feel free to reach out, and we can find a rate that works for both of us.
+            </li>
+            <li>
+                I accept payments via <strong>PayPal</strong> as well as <strong>ETH/BTC/XMR</strong>, and
+                <strong>UPI</strong> for Indian customers.
+            </li>
+        </ul>
 
         <div><a class="top-link" href='#'>Back to top</a> <a href="javascript:void(0)" class='reset-link'
                 aria-role="button">Reset</a></div>
@@ -133,10 +140,12 @@
         const form = document.querySelector('#services-estimate-form');
         const resetLinks = document.querySelectorAll('.reset-link');
         const estimate = document.querySelector('#results-container');
+        const estimateHeading = document.querySelector("#estimate-heading");
 
         const reset = () => {
             form.querySelectorAll('input').forEach(input => input.checked = false);
             estimate.innerHTML = '';
+            estimateHeading.style.display = 'none';
         }
         reset();
         resetLinks.forEach(item => item.addEventListener('click', reset));
@@ -144,19 +153,22 @@
 
         const REQUIRED = ['location', 'service', 'scope'];
 
-        const resultTemplate = (minPrice, maxPrice, maintenanceInfo) => html`
-            <p>Your final estimate: <strong>${minPrice}</strong> - <strong>${maxPrice}</strong> (varies based on project details)</p>
+        const resultTemplate = (minPrice, maxPrice, currency, maintenanceCost, maintenanceInfo) => html`
+            <div>Your final estimate:</div>
+            <div class=estimate-container>
+            <strong>${minPrice}</strong> - <strong>${maxPrice}</strong> (varies based on project details) ${maintenanceCost > 0 ? `+ ${currency}${maintenanceCost}/mo for maintenance contract` : ''}
+            </div>
             <strong>Included:</strong>
             <ul>
+                <li>1 free hour of consultation is included, regardless of whether we decide to work together</li>
                 <li>Development costs</li>
                 <li>${maintenanceInfo ? maintenanceInfo : ''}</li>
+                <li>All source code and assets that are created during the development process</li>
             </ul>
-            <p>
-                Third-party service costs are not included and should be paid directly by 
-                you to the service provider. You own all source code and assets that are 
-                created during the development process, and the first consultation meeting 
-                is free up to 1 hour. Maintenance payments are non-refundable.
-            </p>
+            <strong>Not Included:</strong>
+            <ul>
+                <li>Third-party service costs - Things like domain, hosting, external APIs - you pay these directly to the respective service provider.</li>
+            </ul>
             `.replace(/\<li\>\<\/li\>/g, '');
 
         form.addEventListener('change', (e) => {
@@ -213,7 +225,9 @@
             if (maintenancePrice > 0) {
                 maintenanceInfo = `4 hours of monthly maintenance included at ${rate(0.80)}/hr = ${currency}${maintenancePrice.toFixed(2)} payable monthly.`
             }
-            estimate.innerHTML = resultTemplate(rate(minHours), rate(maxHours), maintenanceInfo)
+
+            estimateHeading.style.display = 'block';
+            estimate.innerHTML = resultTemplate(rate(minHours), rate(maxHours), currency, maintenancePrice, maintenanceInfo)
         })
 
 

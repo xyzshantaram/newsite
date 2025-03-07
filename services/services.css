@@ -46,6 +46,23 @@ input[type="radio"]:checked+label {
     max-width: 70ch;
 }
 
+#estimate-heading {
+    display: none;
+}
+
+.estimate-container strong {
+    font-size: 1.6rem;
+}
+
+.estimate-container {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    width: 100%;
+}
+
 .top-link {
     margin: 1rem;
 }
