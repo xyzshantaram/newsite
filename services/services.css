@@ -33,9 +33,9 @@ input[type="radio"]:checked+label {
     margin-bottom: 0.4rem;
 }
 
-.construction-banner {
+.banner {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 #page-wrapper>p {
