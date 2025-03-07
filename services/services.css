@@ -14,12 +14,6 @@ input[type="radio"]:checked+label {
     grid-template-columns: 1fr 1fr;
 }
 
-@media screen and (max-aspect-ratio: 1/1) {
-    .choices-group {
-        grid-template-columns: 1fr;
-    }
-}
-
 .choices-group label {
     border: 2px solid #f5f4f0;
     padding: 1rem;
@@ -65,4 +59,14 @@ h2 {
 
 .top-link {
     margin: 1rem;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    .choices-group {
+        grid-template-columns: 1fr;
+    }
+
+    ul {
+        padding-inline-start: 0;
+    }
 }
