@@ -61,12 +61,17 @@ h2 {
     margin: 1rem;
 }
 
+h3 {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
 @media screen and (max-aspect-ratio: 1/1) {
     .choices-group {
         grid-template-columns: 1fr;
     }
 
     ul {
-        padding-inline-start: 0;
+        padding-inline-start: 0.5rem;
     }
 }
