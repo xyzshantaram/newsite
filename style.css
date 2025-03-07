@@ -169,6 +169,7 @@ ul#contact li {
 
 #page-wrapper p {
     max-width: 65ch;
+    width: 100%;
     line-height: 1.8;
 }
 
