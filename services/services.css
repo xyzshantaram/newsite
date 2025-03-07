@@ -1,7 +1,7 @@
 input[type="radio"]:checked+label {
     font-weight: bold;
-    color: #202020;
-    background-color: #f5f4f0;
+    color: var(--bg);
+    background-color: var(--text-em-1);
 }
 
 .choices-group input {
@@ -15,7 +15,7 @@ input[type="radio"]:checked+label {
 }
 
 .choices-group label {
-    border: 2px solid #f5f4f0;
+    border: 2px solid var(--text-em-1);
     padding: 1rem;
     border-radius: 0.4rem;
     cursor: pointer;
@@ -62,8 +62,7 @@ h2 {
 }
 
 h3 {
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
+    margin: 0;
 }
 
 @media screen and (max-aspect-ratio: 1/1) {
