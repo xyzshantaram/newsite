@@ -9,6 +9,7 @@ sources=(
     "index.html"
     "style.css"
     "services/index.html"
+    "services/services.css"
     "blog/index.html"
     "contact/index.html"
     "contact/donate.html"
