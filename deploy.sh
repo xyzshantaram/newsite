@@ -24,7 +24,7 @@ sources=(
     "portfolio/res/"
     "portfolio/sites/"
     "icon.css"
-    "img.svg"
+    "pfp.jpg"
     # "assets/fonts/cmunit.eot"
     # "assets/fonts/cmunit.svg"
     # "assets/fonts/cmunit.ttf"
