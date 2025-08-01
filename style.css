@@ -263,6 +263,10 @@ object {
     width: 33.34%;
 }
 
+.hero-image {
+    border-radius: 0.5rem;
+}
+
 .column>.is-two-thirds {
     width: 66.66%;
 }
