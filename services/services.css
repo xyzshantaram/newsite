@@ -38,7 +38,10 @@ input[type="radio"]:checked+label {
 
 #results-container {
     max-width: 70ch;
-    margin-bottom: 1rem;
+}
+
+.notes-heading {
+    margin-top: 1rem;
 }
 
 #estimate-heading {
